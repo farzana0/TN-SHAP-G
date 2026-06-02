@@ -1,0 +1,24 @@
+# Toy demo configuration for TN-SHAP-G
+# This config runs the full pipeline on a small synthetic graph
+
+# Graph configuration
+n_nodes: 12
+n_features: 7
+edge_prob: 0.3  # For random graph generation
+
+# Tensor Network parameters
+bond_dim: 4     # Higher = more expressive, but more parameters
+
+# Training configuration
+n_samples: 500        # Number of training coalitions
+n_val_samples: 100    # Validation coalitions
+epochs: 100           # Max training epochs
+lr: 0.01              # Learning rate
+batch_size: 32        # Training batch size
+
+# Shapley computation
+m_interpolation: 16   # Chebyshev interpolation nodes
+
+# Output
+output_dir: outputs/toy_demo
+seed: 42
